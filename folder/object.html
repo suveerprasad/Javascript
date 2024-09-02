@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <script>
+        const product = {
+            name : 'socks',
+            price : 1090
+        };
+        const product1 = {
+            name : 'short',
+            'delivery-time' : 1,
+            rating : {
+                stars : 4.5,
+                count : 87
+            },
+            fun : function func1(){
+                console.log('hi');
+            }
+        }
+        // console.log(product);
+        // product.name = 'cotton-socks';
+        // console.log(product);
+        // product.location = 'India';
+        // console.log(product1.rating.count);
+        // product1.fun();
+        // JSON.stringify(product1);
+        // console.log(JSON.stringify(product1));
+        // const jsonstr = JSON.stringify(product1);
+        // console.log(JSON.parse(jsonstr));
+
+        console.log('hello'.length);
+        console.log('hello'.toUpperCase());
+        const obj1 = {
+            message : 'hello'
+        };
+        const obj2 = obj1;
+        obj2.message = 'hi';
+        console.log(obj2);
+        console.log(obj1);
+        const obj3 = {
+            message : 'hi'
+        };
+        console.log(obj1===obj3);
+        console.log(obj1===obj2);
+        const obj4 = {
+            message : 'hi',
+            price : 700
+        };
+        // const message = obj4.message;
+        const {message,price} = obj4;
+        console.log(message);
+        console.log(price);
+
+        
+
+
+
+    </script>
+</body>
+</html>
