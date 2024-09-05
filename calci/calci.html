@@ -4,8 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+    <link rel="stylesheet" href="calci.css">
 </head>
 <body>
-    
+    <p class="calculation"></p>
+    <p>
+        <button class="num" onclick="
+            funcer(1);
+            display();
+        ">1</button>
+        <button class="num" onclick="
+            funcer(2);
+            display();
+        ">2</button>
+        <button class="num" onclick="
+            funcer(3);
+            display();
+        ">3</button>
+        <button class="symbol" onclick="
+            funcer('+');
+            display();
+        ">+</button>
+    </p>
+    <p>
+        <button class="num" onclick="
+            funcer(4);
+            display();
+        ">4</button>
+        <button class="num" onclick="
+            funcer(5);
+            display();
+        ">5</button>
+        <button class="num" onclick="
+            funcer(6);
+            display();
+        ">6</button>
+        <button class="symbol" onclick="
+            funcer('-');
+            display();
+        ">-</button>
+    </p>
+    <p>
+        <button class="num" onclick="
+            funcer(7);
+            display();
+        ">7</button>
+        <button class="num" onclick="
+            funcer(8);
+            display();
+        ">8</button>
+        <button class="num" onclick="
+            funcer(9);
+            display();
+        ">9</button>
+        <button class="symbol" onclick="
+            funcer('*');
+            display();
+        ">*</button>
+    </p>
+    <p>
+        <button class="num" onclick="
+            funcer(0);
+            display();
+        ">0</button>
+        <button class="num">.</button>
+        <button class="num" onclick="
+            showanswer();
+        ">=</button>
+        <button class="symbol" onclick="
+            funcer('/');
+            display();
+        ">/</button>
+    </p>
+    <p>
+        <button class="num" onclick="
+            clear();
+        ">Clear</button>
+    </p>
+
+    <script src="calci.js"></script>
 </body>
 </html>
