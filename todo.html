@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo list</title>
+</head>
+<body>
+    <p class="title">Todo List</p>
+    <input placeholder="Todo name" class="input-tab">
+    <button class="add-but" onclick="addfunction()">Add</button>
+    <p class="print-class"></p>
+
+    <script>
+        let list = [];
+
+        function addfunction() {
+            let element = document.querySelector('.input-tab');
+            let text = element.value;
+
+            if (text.trim() !== "") {
+                list.push(text);
+            } else {
+                alert('Enter a valid text');
+            }
+
+            element.value = '';
+            printList();
+        }
+
+        function printList() {
+            let texter = document.querySelector('.print-class');
+            texter.innerHTML = list.map(item => `<p>${item}</p>`).join('');
+        }
+    </script>
+</body>
+</html>
