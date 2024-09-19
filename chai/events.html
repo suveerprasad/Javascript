@@ -24,16 +24,45 @@
     //     alert('owl......');
     // }
 
-    document.getElementById('owl').addEventListener('click',function(){
-        alert("owl clicked again");
-    }, false);
+    // document.getElementById('owl').addEventListener('click',function(){
+    //     alert("owl clicked again");
+    // }, false);
 
+    //event propogation
+    //event bubbling -> false
+    //event capturing -> true
     //attachEvent()
     //jQuery - on
     //type, timestamp, defaultprevented
+    //target, toelement,srcelement, currenttarget
+    //clientx, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey
+
+    document.getElementById('images').addEventListener('click',function(e){
+        console.log("clicked inside the images");
+    }, false);
+
+    document.getElementById('owl').addEventListener('click',function(e){
+        console.log("clicked inside the owl");
+        e.stopImmediatePropagation();
+    }, false);
+
+    document.getElementById('google').addEventListener('click',function(e){
+        e.preventDefault();
+        console.log('google clicked');
+    },false);
+
+    document.querySelector('#images').addEventListener('click',function(e){
+        // console.log(e.target.parentNode);
+        if(e.target.tagName === 'IMG'){
+            let rem = e.target.parentNode;
+            rem.remove();
+        }
+        // let rem = e.target.parentNode;
+        // rem.remove();
+    },false);
+
     
-
-
 
 </script>
 </html>
