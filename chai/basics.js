@@ -110,7 +110,13 @@ const user1 = {
 
 //javascript execution context
 
-//global execution context
+// ---> global execution context
+// ---> function execution context
+// ---> eval execution context
+
+// ---> Memory execution phase
+// ---> exection phase
+
 
 
 
